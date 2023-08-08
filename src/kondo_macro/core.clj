@@ -1,6 +1,4 @@
-(ns kondo-macro.core)
+(ns kondo-macro.core
+  (:require [metrics.histograms :as histo]))
 
-(defn foo
-  "I don't do a whole lot."
-  [x]
-  (println x "Hello, World!"))
+(histo/defhistogram sample)

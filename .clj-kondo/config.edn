@@ -1,16 +1,3 @@
-{:linters {:aliased-namespace-symbol {:level :warning}
-           :discouraged-var
-           {clojure.core/concat {:message "Please use 'into' instead https://tinyurl.com/clj-into"}}
-           :dynamic-var-not-earmuffed {:level :warning}
-           :invalid-arity {:level :warning}
-           :private-call {:level :warning}
-           :shadowed-var {:level :warning}
-           :unsorted-required-namespaces {:level :warning}
-           :unresolved-symbol {:level :warning}
-           :unused-binding {:exclude-destructured-as true}
-           :used-underscored-binding {:level :warning}
-           :warn-on-reflection {:level :warning}}
+{:linters {}
  :debug true
- :ns-groups [{:pattern ".*-test" :name test-group}]
- :config-in-ns {test-group {:linters {:warn-on-reflection {:level :off}}}}
  :hooks {:macroexpand {metrics.histograms/defhistogram metrics.histograms/defhistogram}}}
